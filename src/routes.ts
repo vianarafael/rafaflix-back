@@ -1,9 +1,15 @@
-import { Router, Request, Response} from 'express';
-import { appendFile } from 'fs';
+import { Router } from 'express';
 
 import { auth } from './middleware/auth';
+import { getUser, index, login, signUp } from './controller/UserController'
 const routes = Router();
 
-routes.use(auth);
+routes.get('/', index)
+routes.post('/signup', signUp);
+routes.post('/session', login)
 
-module.exports = routes;
+routes.use(auth);
+routes.get('/user/:id', getUser);
+
+
+export default routes;
