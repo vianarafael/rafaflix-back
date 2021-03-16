@@ -11,5 +11,6 @@ var app = express();
 app.use(cors());
 app.use(express.json());
 app.use(routes_1.default);
-app.listen(3333);
+var port = process.env.PORT || 3333;
+app.listen(port);
 //# sourceMappingURL=index.js.map
