@@ -120,7 +120,11 @@ var signUp = function (request, response) { return __awaiter(void 0, void 0, voi
                 return [2 /*return*/, response.json(user)];
             case 3:
                 err_1 = _b.sent();
-                response.json({ message: err_1 });
+                response.json({
+                    version: 1,
+                    message: err_1,
+                    db: User_1.User
+                });
                 return [3 /*break*/, 4];
             case 4: return [2 /*return*/];
         }
