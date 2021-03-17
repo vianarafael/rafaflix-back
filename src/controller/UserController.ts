@@ -48,7 +48,8 @@ export const getUser = async (request: Request, response: Response) => {
 
 export const signUp = async (request: Request, response: Response) => {
 
-    const { name, email, password } = request.body;
+  try {
+   const { name, email, password } = request.body;
     // number of rounds?
     const passwordHash = await bcrypt.hash(password, 8);
 
@@ -59,4 +60,9 @@ export const signUp = async (request: Request, response: Response) => {
     })
 
     return response.json(user);
+  } catch (err) {
+    response.json({message: err})
+  }
+
+
 }
