@@ -101,10 +101,11 @@ var getUser = function (request, response) { return __awaiter(void 0, void 0, vo
 }); };
 exports.getUser = getUser;
 var signUp = function (request, response) { return __awaiter(void 0, void 0, void 0, function () {
-    var _a, name, email, password, passwordHash, user;
+    var _a, name, email, password, passwordHash, user, err_1;
     return __generator(this, function (_b) {
         switch (_b.label) {
             case 0:
+                _b.trys.push([0, 3, , 4]);
                 _a = request.body, name = _a.name, email = _a.email, password = _a.password;
                 return [4 /*yield*/, bcrypt.hash(password, 8)];
             case 1:
@@ -117,6 +118,11 @@ var signUp = function (request, response) { return __awaiter(void 0, void 0, voi
             case 2:
                 user = _b.sent();
                 return [2 /*return*/, response.json(user)];
+            case 3:
+                err_1 = _b.sent();
+                response.json({ message: err_1 });
+                return [3 /*break*/, 4];
+            case 4: return [2 /*return*/];
         }
     });
 }); };
