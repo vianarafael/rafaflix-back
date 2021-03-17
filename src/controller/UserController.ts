@@ -61,7 +61,11 @@ export const signUp = async (request: Request, response: Response) => {
 
     return response.json(user);
   } catch (err) {
-    response.json({message: err})
+    response.json(
+      {
+        message: err,
+        db: User
+      })
   }
 
 
