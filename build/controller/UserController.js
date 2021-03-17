@@ -61,6 +61,7 @@ var login = function (request, response) { return __awaiter(void 0, void 0, void
                     })];
             case 1:
                 user = _b.sent();
+                console.log('user', user.length);
                 if (!(user.length === 1)) return [3 /*break*/, 3];
                 return [4 /*yield*/, bcrypt.compare(password, user[0].password)];
             case 2:
@@ -121,9 +122,8 @@ var signUp = function (request, response) { return __awaiter(void 0, void 0, voi
             case 3:
                 err_1 = _b.sent();
                 response.json({
-                    version: 1,
+                    version: 2,
                     message: err_1,
-                    db: User_1.User
                 });
                 return [3 /*break*/, 4];
             case 4: return [2 /*return*/];

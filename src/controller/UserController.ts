@@ -17,7 +17,7 @@ export const login = async (request: Request, response: Response) => {
             email
         }
     })
-
+    console.log('user', user.length)
     if (user.length === 1) {
         if (await bcrypt.compare(password, user[0].password)) {
             const token = jwt.sign({ id: user[0].id }, process.env.APP_SECRET, {
@@ -63,9 +63,8 @@ export const signUp = async (request: Request, response: Response) => {
   } catch (err) {
     response.json(
       {
-        version: 1,
+        version: 2,
         message: err,
-        db: User
       })
   }
 

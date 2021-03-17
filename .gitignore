@@ -4,7 +4,7 @@ node_modules/
 # build/ trying to deploy - somehow
 tmp/
 temp/
-.env
+# .env just to test
 # Logs
 logs
 *.log
