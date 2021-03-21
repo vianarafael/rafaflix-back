@@ -5,7 +5,7 @@ import { getUser, index, login, signUp } from './controller/UserController';
 import { addMovie, getMovies, deleteMovie } from './controller/MoviesController'
 const routes = Router();
 
-routes.get('/', index)
+routes.get('/api', index)
 routes.post('/signup', signUp);
 routes.post('/session', login)
 

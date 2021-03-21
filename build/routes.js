@@ -5,7 +5,7 @@ var auth_1 = require("./middleware/auth");
 var UserController_1 = require("./controller/UserController");
 var MoviesController_1 = require("./controller/MoviesController");
 var routes = express_1.Router();
-routes.get('/', UserController_1.index);
+routes.get('/api', UserController_1.index);
 routes.post('/signup', UserController_1.signUp);
 routes.post('/session', UserController_1.login);
 routes.use(auth_1.auth);

@@ -36,10 +36,9 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.deleteMovie = exports.addMovie = exports.getMovies = void 0;
 var typeorm_1 = require("typeorm");
 var Movies_1 = require("../entity/Movies");
-var getMovies = function (request, response) { return __awaiter(void 0, void 0, void 0, function () {
+exports.getMovies = function (request, response) { return __awaiter(void 0, void 0, void 0, function () {
     var user_id, movies;
     return __generator(this, function (_a) {
         switch (_a.label) {
@@ -58,8 +57,7 @@ var getMovies = function (request, response) { return __awaiter(void 0, void 0, 
         }
     });
 }); };
-exports.getMovies = getMovies;
-var addMovie = function (request, response) { return __awaiter(void 0, void 0, void 0, function () {
+exports.addMovie = function (request, response) { return __awaiter(void 0, void 0, void 0, function () {
     var _a, user_id, movie_id, movie;
     return __generator(this, function (_b) {
         switch (_b.label) {
@@ -76,8 +74,7 @@ var addMovie = function (request, response) { return __awaiter(void 0, void 0, v
         }
     });
 }); };
-exports.addMovie = addMovie;
-var deleteMovie = function (request, response) { return __awaiter(void 0, void 0, void 0, function () {
+exports.deleteMovie = function (request, response) { return __awaiter(void 0, void 0, void 0, function () {
     var _a, user_id, movie_id, movie;
     return __generator(this, function (_b) {
         switch (_b.label) {
@@ -91,5 +88,4 @@ var deleteMovie = function (request, response) { return __awaiter(void 0, void 0
         }
     });
 }); };
-exports.deleteMovie = deleteMovie;
 //# sourceMappingURL=MoviesController.js.map

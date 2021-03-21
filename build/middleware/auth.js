@@ -36,9 +36,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.auth = void 0;
 var jwt = require("jsonwebtoken");
-var auth = function (request, response, next) { return __awaiter(void 0, void 0, void 0, function () {
+exports.auth = function (request, response, next) { return __awaiter(void 0, void 0, void 0, function () {
     var authHeader, _a, token, err_1;
     return __generator(this, function (_b) {
         switch (_b.label) {
@@ -64,5 +63,4 @@ var auth = function (request, response, next) { return __awaiter(void 0, void 0,
         }
     });
 }); };
-exports.auth = auth;
 //# sourceMappingURL=auth.js.map

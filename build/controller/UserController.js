@@ -36,19 +36,17 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.signUp = exports.getUser = exports.login = exports.index = void 0;
 var typeorm_1 = require("typeorm");
 var User_1 = require("../entity/User");
 var bcrypt = require("bcrypt");
 var jwt = require("jsonwebtoken");
-var index = function (request, response) { return __awaiter(void 0, void 0, void 0, function () {
+exports.index = function (request, response) { return __awaiter(void 0, void 0, void 0, function () {
     return __generator(this, function (_a) {
         response.json({ message: "Welcome to Rafaflix" });
         return [2 /*return*/];
     });
 }); };
-exports.index = index;
-var login = function (request, response) { return __awaiter(void 0, void 0, void 0, function () {
+exports.login = function (request, response) { return __awaiter(void 0, void 0, void 0, function () {
     var _a, email, password, user, token, data;
     return __generator(this, function (_b) {
         switch (_b.label) {
@@ -86,8 +84,7 @@ var login = function (request, response) { return __awaiter(void 0, void 0, void
         }
     });
 }); };
-exports.login = login;
-var getUser = function (request, response) { return __awaiter(void 0, void 0, void 0, function () {
+exports.getUser = function (request, response) { return __awaiter(void 0, void 0, void 0, function () {
     var id, user;
     return __generator(this, function (_a) {
         switch (_a.label) {
@@ -100,8 +97,7 @@ var getUser = function (request, response) { return __awaiter(void 0, void 0, vo
         }
     });
 }); };
-exports.getUser = getUser;
-var signUp = function (request, response) { return __awaiter(void 0, void 0, void 0, function () {
+exports.signUp = function (request, response) { return __awaiter(void 0, void 0, void 0, function () {
     var _a, name, email, password, passwordHash, user, err_1;
     return __generator(this, function (_b) {
         switch (_b.label) {
@@ -130,5 +126,4 @@ var signUp = function (request, response) { return __awaiter(void 0, void 0, voi
         }
     });
 }); };
-exports.signUp = signUp;
 //# sourceMappingURL=UserController.js.map
