@@ -10,14 +10,16 @@ module.exports = {
   username: process.env.RDS_USERNAME || "postgres",
   password: process.env.RDS_PASSWORD || "sharck",
    "entities": [
-      // "src/entity/**/*.ts"
+      // "src/entity/**/*.ts",
      "build/entity/**/*.js"
    ],
    "migrations": [
-      "src/migration/**/*.ts"
+    //  "src/migration/**/*.ts",
+     "build/migration/**/*.js"
    ],
    "subscribers": [
-      "src/subscriber/**/*.ts"
+    //  "src/subscriber/**/*.ts",
+     "build/subscriber/**/*.js"
    ],
    "cli": {
       "entitiesDir": "src/entity",

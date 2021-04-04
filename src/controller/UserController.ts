@@ -5,7 +5,7 @@ import * as bcrypt from 'bcrypt';
 import * as jwt from 'jsonwebtoken';
 
 export const index = async (request: Request, response: Response) => {
-  response.json({ message: "Welcome to Rafaflix"})
+  response.json({ message: "Welcome to Rafaflix updated"})
 }
 
 export const login = async (request: Request, response: Response) => {
@@ -17,7 +17,7 @@ export const login = async (request: Request, response: Response) => {
             email
         }
     })
-    console.log('user', user.length)
+
     if (user.length === 1) {
         if (await bcrypt.compare(password, user[0].password)) {
             const token = jwt.sign({ id: user[0].id }, process.env.APP_SECRET, {

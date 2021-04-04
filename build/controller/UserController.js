@@ -36,17 +36,19 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.signUp = exports.getUser = exports.login = exports.index = void 0;
 var typeorm_1 = require("typeorm");
 var User_1 = require("../entity/User");
 var bcrypt = require("bcrypt");
 var jwt = require("jsonwebtoken");
-exports.index = function (request, response) { return __awaiter(void 0, void 0, void 0, function () {
+var index = function (request, response) { return __awaiter(void 0, void 0, void 0, function () {
     return __generator(this, function (_a) {
-        response.json({ message: "Welcome to Rafaflix" });
+        response.json({ message: "Welcome to Rafaflix updated" });
         return [2 /*return*/];
     });
 }); };
-exports.login = function (request, response) { return __awaiter(void 0, void 0, void 0, function () {
+exports.index = index;
+var login = function (request, response) { return __awaiter(void 0, void 0, void 0, function () {
     var _a, email, password, user, token, data;
     return __generator(this, function (_b) {
         switch (_b.label) {
@@ -59,7 +61,6 @@ exports.login = function (request, response) { return __awaiter(void 0, void 0, 
                     })];
             case 1:
                 user = _b.sent();
-                console.log('user', user.length);
                 if (!(user.length === 1)) return [3 /*break*/, 3];
                 return [4 /*yield*/, bcrypt.compare(password, user[0].password)];
             case 2:
@@ -84,7 +85,8 @@ exports.login = function (request, response) { return __awaiter(void 0, void 0, 
         }
     });
 }); };
-exports.getUser = function (request, response) { return __awaiter(void 0, void 0, void 0, function () {
+exports.login = login;
+var getUser = function (request, response) { return __awaiter(void 0, void 0, void 0, function () {
     var id, user;
     return __generator(this, function (_a) {
         switch (_a.label) {
@@ -97,7 +99,8 @@ exports.getUser = function (request, response) { return __awaiter(void 0, void 0
         }
     });
 }); };
-exports.signUp = function (request, response) { return __awaiter(void 0, void 0, void 0, function () {
+exports.getUser = getUser;
+var signUp = function (request, response) { return __awaiter(void 0, void 0, void 0, function () {
     var _a, name, email, password, passwordHash, user, err_1;
     return __generator(this, function (_b) {
         switch (_b.label) {
@@ -126,4 +129,5 @@ exports.signUp = function (request, response) { return __awaiter(void 0, void 0,
         }
     });
 }); };
+exports.signUp = signUp;
 //# sourceMappingURL=UserController.js.map
