@@ -6,14 +6,14 @@ import { addMovie, getMovies, deleteMovie } from './controller/MoviesController'
 const routes = Router();
 
 routes.get('/api', index)
-routes.post('/signup', signUp);
-routes.post('/session', login)
+routes.post('/api/signup', signUp);
+routes.post('/api/session', login);
 
 routes.use(auth);
-routes.get('/user/:id', getUser);
+routes.get('/api/user/:id', getUser);
 
-routes.get('/movies/:user_id', getMovies);
-routes.post('/movie', addMovie);
-routes.delete('/movie', deleteMovie);
+routes.get('/api/movies/:user_id', getMovies);
+routes.post('/api/movie', addMovie);
+routes.delete('/api/movie', deleteMovie);
 
 export default routes;
