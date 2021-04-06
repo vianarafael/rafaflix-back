@@ -9,7 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Movies = void 0;
 var typeorm_1 = require("typeorm");
 var Movies = /** @class */ (function () {
     function Movies() {
@@ -27,7 +26,7 @@ var Movies = /** @class */ (function () {
         __metadata("design:type", Number)
     ], Movies.prototype, "movie_id", void 0);
     Movies = __decorate([
-        typeorm_1.Entity()
+        typeorm_1.Entity('movies')
     ], Movies);
     return Movies;
 }());

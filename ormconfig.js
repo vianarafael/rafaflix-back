@@ -7,11 +7,11 @@ module.exports = {
   database:  "rafaflix",
   port: process.env.RDS_PORT || 5432,
   host: process.env.RDS_HOSTNAME || "localhost",
-  username: process.env.RDS_USERNAME || "postgres",
-  password: process.env.RDS_PASSWORD || "sharck",
+  username: process.env.RDS_USERNAME || "ubuntu",
+  password: process.env.RDS_PASSWORD || "ubuntu",
    "entities": [
       // "src/entity/**/*.ts",
-     "build/entity/**/*.js"
+     __dirname + "/build/entity/**/*.js"
    ],
    "migrations": [
     //  "src/migration/**/*.ts",

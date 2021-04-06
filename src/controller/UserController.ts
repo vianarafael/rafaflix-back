@@ -5,7 +5,7 @@ import * as bcrypt from 'bcrypt';
 import * as jwt from 'jsonwebtoken';
 
 export const index = async (request: Request, response: Response) => {
-  response.json({ message: "Welcome to Rafaflix updated"})
+  response.json({ message: "How you like me now?"})
 }
 
 export const login = async (request: Request, response: Response) => {
